@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS.css">
+    <title>PGES</title>
+    </head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/raw.png" alt="logito">
+        </div>
+        <button class="menu-button"></button>
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="nav-eventos">
+                    <a href="#" class="eventos-link">Eventos</a>
+                    <button class="hamburger" aria-label="Abrir menú de eventos">
+                        &#9776;
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="carrusel1.html">Taller de concienciación</a></li>
+                        <li><a href="carrusel2.html">Taller de sostenibilidad</a></li>
+                        <li><a href="carrusel3.html">Conferencia sostenible</a></li>
+                        <li><a href="carrusel4.html">Reunión de concienciación sostenible</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bienvenida-section">
+        <div class="bienvenida-content"> <h1>Bienvenido a nuestro Portal</h1>
+            <p>Bienvenidos a PGES, la plataforma líder en la gestión de eventos sostenibles. Descubre cómo puedes inscribirte en eventos, conferencias y talleres, o crear los tuyos. ¡Únete a la sostenibilidad!</p>
+            <a href="#" class="explore-button"></a>
+        </div>
+        <div class="welcome-image">
+            <img src="images/Inicio-PGES.jpg" alt="Foto_Inicio">
+        </div>
+    </section>
+
+    <section class="objetivos-section">
+        <div class="objetivos-content">
+            <h2>Nuestros objetivos</h2>
+            <p>En PGES, nos dedicamos a promover la sostenibilidad a través de la gestión de eventos. Nuestra misión es facilitar la colaboración entre asistentes y organizadores para crear eventos memorables y respetuosos con el medio ambiente.</p>
+            <p>Creemos en el poder de la sostenibilidad y en la importancia de cada acción para un futuro más verde. Únete a nosotros para marcar la diferencia</p>
+            <a href="#" class="learn-more-button"></a>
+        </div>
+        <div class="objetivos-image">
+            <img src="images/objetivos-PGES.jpg" alt="Objetivos">
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Servicios</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="images/carrusel1.jpg" alt="carrusel1">
+                    <h3 class="taller-concienciacion">Taller de concienciacion</h3>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carrusel2.jpg" alt="taller de plantacion">
+                    <h3 class="taller-sostenibilidad">Taller de sostenibilidad</h3>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carrusel3.jpg" alt="conferencia1">
+                    <h3 class="conferencia-sostenible-1">Conferencia sostenible 1</h3>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carrusel4.jpg"  alt="conferencia2">
+                    <h3 class="conferencia-sostenible-2">Conferencia sostenible 2</h3>
+                </div>
+
+            </div>
+            <button class="carousel-button prev"></button> <button class="carousel-button next"></button> <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </div>
+        </div>
+    </section>
+
+
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo"></div>
+                <p></p>
+                <p><a href="images/logo-footer.jpg"></a></p>
+                <address></address>
+                <div class="social-icons">
+                    <a href="#" class="social-icon logo-facebook">
+                        <img src="images/facebook-footer.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon logo-instagram">
+                        <img src="images/instagram-footer.jpg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon logo-twitter">
+                        <img src="images/twitter-footer.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-icon logo-linkedin">
+                        <img src="images/linkedin-footer.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Declaracion de Accesibilidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Dudas Frecuentes</a></li>
+                </ul>
+                <p class="copyright"></p>
+            </div>
+        </div>
+        <div class="footer-bottom-line">
+        </div>
+    </footer>
+    <script>
+document.querySelectorAll('.nav-eventos .hamburger').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const parent = this.closest('.nav-eventos');
+        parent.classList.toggle('open');
+    });
+});
+document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-eventos.open').forEach(el => el.classList.remove('open'));
+});
+</script>
+<script src="carrusel.js"></script>
+</body>
+</html>

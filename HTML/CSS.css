@@ -1,0 +1,350 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #087937;;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navigation {
+    position: relative;
+}
+
+/* Asegura que el nav esté alineado horizontalmente */
+.navigation .nav-links {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo general de los enlaces del nav */
+.navigation .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75em 1.5em;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+}
+
+/* Color blanco para Eventos */
+.nav-eventos .eventos-link {
+    color: #fff !important;
+    background: transparent;
+    font-weight: 600;
+}
+
+/* Tabla de eventos (oculta inicialmente) */
+.event-table {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    z-index: 100;
+    width: 300px;
+    color: #333;
+}
+
+.event-table th, .event-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.event-table img {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.event-table img:hover {
+    transform: scale(1.1);
+}
+
+/* Secciones */
+.bienvenida-section, .objetivos-section {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bienvenida-content, .objetivos-content {
+    flex: 1;
+}
+
+.welcome-image, .objetivos-image {
+    flex: 1;
+}
+
+.welcome-image img, .objetivos-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Carrusel */
+.gallery-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #087937;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #087937;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    height: 45px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 30px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mostrar tabla al hacer hover en Eventos */
+.nav-links li:nth-child(2):hover .event-table {
+    display: block;
+}
+
+/* Menú hamburguesa solo para Eventos */
+.nav-eventos {
+    position: relative;
+}
+.hamburger {
+    background: none;
+    border: none;
+    color: #087937;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border-radius: 8px;
+    min-width: 220px;
+    z-index: 10;
+    flex-direction: column;
+    padding: 0.5em 0;
+}
+
+/* Submenú oculto por defecto */
+.nav-eventos .submenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border-radius: 8px;
+    min-width: 220px;
+    z-index: 10;
+    flex-direction: column;
+    padding: 0.5em 0;
+    top: 100%;
+    left: 0;
+}
+
+.submenu li {
+    list-style: none;
+}
+.submenu a {
+    display: block;
+    padding: 0.75em 1.5em;
+    color: #087937;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.submenu a:hover {
+    background: #f0f0f0;
+}
+
+/* Mostrar submenu al activar */
+.nav-eventos.open .submenu {
+    display: flex;
+}
+
+/* Mostrar submenú al pasar el ratón en escritorio */
+@media (min-width: 769px) {
+    .nav-eventos:hover .submenu,
+    .nav-eventos:focus-within .submenu {
+        display: flex;
+    }
+}
+
+/* Responsive: hamburguesa en móvil */
+@media (max-width: 768px) {
+    .navigation .nav-links {
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        width: 100%;
+        align-items: center;
+    }
+    .nav-eventos .eventos-link {
+        display: none;
+    }
+    .nav-eventos .hamburger {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: none;
+        color: #222;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.75em 1.5em;
+        width: 100%;
+        justify-content: center;
+        font-weight: 600;
+    }
+    .nav-eventos.open .submenu {
+        display: flex;
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 0;
+        background: #fff;
+    }
+    .nav-eventos .submenu a {
+        color: #222 !important;
+        background: #fff;
+        text-align: center;
+    }
+}
+
+/* Centralizar "Eventos" en escritorio */
+.navigation .nav-links {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Submenú: letras negras y fondo blanco */
+.nav-eventos .submenu {
+    background: #fff;
+}
+.nav-eventos .submenu a {
+    color: #222 !important;
+    background: #fff;
+    font-weight: 500;
+}
+.nav-eventos .submenu a:hover {
+    background: #f0f0f0;
+    color: #087937 !important;
+}

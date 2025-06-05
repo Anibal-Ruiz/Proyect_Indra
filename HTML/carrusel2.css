@@ -1,0 +1,64 @@
+/* carrusel1.css */
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor del carrusel */
+.carrusel-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor de la imagen */
+body > div {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    height: 95vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Slides */
+.carrusel-slide {
+    display: none;
+    width: 300%;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel-slide.active {
+    display: flex;
+}
+
+/* Imagen del carrusel */
+body > div img {
+    width: 50%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(8,121,55,0.10);
+    object-fit: contain;
+    display: block;
+}
+
+
+
